@@ -2,7 +2,6 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import DataShowcase from './components/DataShowcase'
 import HowItWorks from './components/HowItWorks'
-import SocialProof from './components/SocialProof'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 
@@ -13,7 +12,6 @@ export default function Home() {
       <HeroSection />
       <DataShowcase />
       <HowItWorks />
-      <SocialProof />
       <FinalCTA />
       <Footer />
     </main>
