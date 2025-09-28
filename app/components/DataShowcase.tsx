@@ -7,7 +7,7 @@ const DataShowcase = () => {
     {
       id: 1,
       title: "Warehouse Object Recognition",
-      description: "Comprehensive dataset of warehouse objects including boxes, pallets, forklifts, and inventory items captured from multiple angles and lighting conditions.",
+      description: "High-quality warehouse object detection dataset with boxes, pallets, and inventory items.",
       metrics: [
         { icon: Database, label: "1.2M Images", value: "1.2M Images" },
         { icon: FileVideo, label: "Video & RGB", value: "Video & RGB" },
@@ -18,7 +18,7 @@ const DataShowcase = () => {
     {
       id: 2,
       title: "Autonomous Drone Navigation",
-      description: "High-resolution aerial footage with GPS coordinates, obstacle detection data, and weather conditions for training drone navigation systems.",
+      description: "Aerial footage with GPS coordinates and obstacle detection for drone navigation training.",
       metrics: [
         { icon: Clock, label: "2.5K Hours", value: "2.5K Hours" },
         { icon: FileVideo, label: "4K Video & LiDAR", value: "4K Video & LiDAR" },
@@ -29,7 +29,7 @@ const DataShowcase = () => {
     {
       id: 3,
       title: "Human-Robot Interaction",
-      description: "Diverse collection of human gestures, voice commands, and interaction patterns for developing more intuitive robotic interfaces.",
+      description: "Human gestures, voice commands, and interaction patterns for intuitive robotic interfaces.",
       metrics: [
         { icon: Users, label: "10K Interactions", value: "10K Interactions" },
         { icon: FileVideo, label: "Audio & Video", value: "Audio & Video" },
@@ -40,7 +40,7 @@ const DataShowcase = () => {
     {
       id: 4,
       title: "Industrial Assembly Lines",
-      description: "Real-world factory floor data including robotic arm movements, quality control processes, and production line optimization scenarios.",
+      description: "Factory floor data with robotic arm movements and quality control processes.",
       metrics: [
         { icon: Eye, label: "800K Samples", value: "800K Samples" },
         { icon: FileVideo, label: "Multi-Camera", value: "Multi-Camera" },
@@ -51,7 +51,7 @@ const DataShowcase = () => {
     {
       id: 5,
       title: "Agricultural Robot Training",
-      description: "Comprehensive agricultural data including crop identification, soil analysis, and precision farming techniques for autonomous farming robots.",
+      description: "Crop identification and soil analysis data for precision farming robots.",
       metrics: [
         { icon: Database, label: "2M Plant Images", value: "2M Plant Images" },
         { icon: FileVideo, label: "Multispectral", value: "Multispectral" },
@@ -62,7 +62,7 @@ const DataShowcase = () => {
     {
       id: 6,
       title: "Medical Surgical Robotics",
-      description: "Precision surgical procedures data with robotic arm telemetry, patient monitoring, and surgical outcome metrics for medical robot training.",
+      description: "Surgical procedures data with robotic arm telemetry and patient monitoring.",
       metrics: [
         { icon: Clock, label: "1K Procedures", value: "1K Procedures" },
         { icon: FileVideo, label: "HD + Sensors", value: "HD + Sensors" },
@@ -93,38 +93,32 @@ const DataShowcase = () => {
               key={dataset.id}
               className="card-hover bg-gray-800 rounded-xl overflow-hidden border border-gray-700 group"
             >
-              {/* Preview/Thumbnail */}
-              <div className="h-32 bg-gray-750 relative border-b border-gray-700">
-                <div className="absolute top-4 right-4">
-                  <span className="bg-gray-600 text-white text-xs px-3 py-1 rounded-full">
-                    {dataset.category}
-                  </span>
-                </div>
-              </div>
-
               {/* Card Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                   {dataset.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                   {dataset.description}
                 </p>
 
-                {/* Metrics */}
-                <div className="space-y-3">
-                  {dataset.metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <metric.icon className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{metric.value}</span>
-                    </div>
-                  ))}
-                </div>
+                {/* Metrics and Button Row */}
+                <div className="flex items-start justify-between">
+                  {/* Metrics */}
+                  <div className="space-y-2 flex-1">
+                    {dataset.metrics.map((metric, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <metric.icon className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{metric.value}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                {/* Action Button */}
-                <button className="w-full mt-6 bg-gray-700 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-[1.02]">
-                  View Dataset
-                </button>
+                  {/* Action Button */}
+                  <button className="ml-4 bg-gray-700 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap">
+                    View Dataset
+                  </button>
+                </div>
               </div>
             </div>
           ))}
