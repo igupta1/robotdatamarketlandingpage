@@ -1,6 +1,6 @@
-# RoboData Landing Page
+# Neural Landing Page
 
-A modern, responsive landing page for RoboData - The Marketplace for Robotics Training Data. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive landing page for Neural - The Marketplace for Robotics Training Data. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 

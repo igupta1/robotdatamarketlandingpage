@@ -73,11 +73,11 @@ const DataShowcase = () => {
   ]
 
   return (
-    <section className="pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-gray-900" id="marketplace">
+    <section className="pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-white" id="marketplace">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-3xl font-bold text-white max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
             Explore Our Datasets
           </h2>
         </div>
@@ -87,14 +87,14 @@ const DataShowcase = () => {
           {datasets.map((dataset) => (
             <div
               key={dataset.id}
-              className="card-hover bg-gray-800 rounded-xl overflow-hidden border border-gray-700 group"
+              className="card-hover bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg group"
             >
               {/* Card Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
                   {dataset.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                   {dataset.description}
                 </p>
 
@@ -105,13 +105,13 @@ const DataShowcase = () => {
                     {dataset.metrics.map((metric, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <metric.icon className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{metric.value}</span>
+                        <span className="text-gray-700 text-sm">{metric.value}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Action Button */}
-                  <button className="ml-4 bg-gray-700 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap">
+                  <button className="ml-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap shadow-md">
                     View Dataset
                   </button>
                 </div>

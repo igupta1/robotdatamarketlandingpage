@@ -1,7 +1,7 @@
 {
   "name": "robodata-landing-page",
   "version": "1.0.0",
-  "description": "Landing page for RoboData - The Marketplace for Robotics Training Data",
+  "description": "Landing page for Neural - The Marketplace for Robotics Training Data",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -36,6 +36,6 @@
     "landing-page",
     "marketplace"
   ],
-  "author": "RoboData Inc.",
+  "author": "Neural Inc.",
   "license": "MIT"
 }

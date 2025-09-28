@@ -5,30 +5,30 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RoboData - The Marketplace for Robotics Training Data',
+  title: 'Neural - The Marketplace for Robotics Training Data',
   description: 'Accelerate your robotics development with high-quality, diverse, and ready-to-use datasets from the leading marketplace for robotics training data.',
   keywords: 'robotics, training data, machine learning, AI, datasets, automation',
-  authors: [{ name: 'RoboData Inc.' }],
-  creator: 'RoboData Inc.',
+  authors: [{ name: 'Neural Inc.' }],
+  creator: 'Neural Inc.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://robodata.com',
-    siteName: 'RoboData',
-    title: 'RoboData - The Marketplace for Robotics Training Data',
+    siteName: 'Neural',
+    title: 'Neural - The Marketplace for Robotics Training Data',
     description: 'Accelerate your robotics development with high-quality, diverse, and ready-to-use datasets.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'RoboData - Robotics Training Data Marketplace',
+        alt: 'Neural - Robotics Training Data Marketplace',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RoboData - The Marketplace for Robotics Training Data',
+    title: 'Neural - The Marketplace for Robotics Training Data',
     description: 'Accelerate your robotics development with high-quality, diverse, and ready-to-use datasets.',
     images: ['/og-image.jpg'],
   },
