@@ -45,15 +45,6 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Connection Line (Desktop) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-600 to-gray-700 transform translate-x-4 z-0">
-                  <div className="absolute right-0 top-1/2 transform translate-x-2 -translate-y-1/2">
-                    <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-                  </div>
-                </div>
-              )}
-
               {/* Step Card */}
               <div className="relative z-10 text-center lg:text-left">
                 {/* Step Number */}
@@ -77,13 +68,6 @@ const HowItWorks = () => {
                 <p className="text-gray-300 leading-relaxed max-w-sm mx-auto lg:mx-0">
                   {step.description}
                 </p>
-
-                {/* Mobile Connection Line */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-8 mb-8">
-                    <div className="w-0.5 h-12 bg-gradient-to-b from-gray-600 to-gray-700"></div>
-                  </div>
-                )}
               </div>
             </div>
           ))}
