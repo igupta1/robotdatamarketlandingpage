@@ -4,7 +4,7 @@ import { ArrowRight, Play } from 'lucide-react'
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8">
       {/* Background Video Placeholder */}
       <div className="absolute inset-0 z-0">
         {/* Placeholder for background video - in a real implementation, you'd use a video element */}
@@ -26,9 +26,9 @@ const HeroSection = () => {
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="space-y-8">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-normal pb-4">
-            <span className="block text-white mb-4">The Marketplace for</span>
-            <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight pb-8" style={{lineHeight: '1.2'}}>
+            <span className="block text-white mb-6">The Marketplace for</span>
+            <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent pb-4">
               Robotics Training Data
             </span>
           </h1>
