@@ -73,17 +73,13 @@ const DataShowcase = () => {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900" id="marketplace">
+    <section className="pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-gray-900" id="marketplace">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-3xl font-bold text-white max-w-3xl mx-auto">
             Explore Our Datasets
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Discover high-quality, production-ready datasets that power the next generation 
-            of robotics applications across industries.
-          </p>
         </div>
 
         {/* Dataset Grid */}
@@ -124,15 +120,6 @@ const DataShowcase = () => {
           ))}
         </div>
 
-        {/* Browse More CTA */}
-        <div className="text-center mt-16">
-          <button className="btn-primary">
-            Browse All Datasets
-          </button>
-          <p className="text-gray-400 text-sm mt-4">
-            Over 500+ datasets available across 20+ categories
-          </p>
-        </div>
       </div>
     </section>
   )

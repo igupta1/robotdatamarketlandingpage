@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import DataShowcase from './components/DataShowcase'
-import HowItWorks from './components/HowItWorks'
 import Footer from './components/Footer'
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <DataShowcase />
-      <HowItWorks />
       <Footer />
     </main>
   )

@@ -44,11 +44,6 @@ const Footer = () => {
             <div className="mb-4">
               <h3 className="text-2xl font-bold text-white">RoboData</h3>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              The world's leading marketplace for robotics training data. 
-              Empowering developers and researchers to build the future of robotics 
-              with high-quality, diverse datasets.
-            </p>
             
             {/* Newsletter Signup */}
             <div className="mb-6">
@@ -141,19 +136,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-6 pt-6 border-t border-gray-800">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-              <div className="flex flex-wrap gap-6">
-                <span>🔒 Enterprise-grade security</span>
-                <span>⚡ 99.9% uptime SLA</span>
-                <span>🌍 Global CDN</span>
-              </div>
-              <div>
-                <span>Made with ❤️ for the robotics community</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

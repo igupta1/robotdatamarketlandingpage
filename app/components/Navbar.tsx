@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+    <header className="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-400 hover:text-white hover:bg-gray-700 px-2 py-2 rounded-md"
+              className="text-gray-300 hover:text-white hover:bg-gray-800 px-2 py-2 rounded-md"
             >
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
@@ -70,7 +70,7 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 border border-gray-800">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 border border-gray-700 shadow-lg">
               <a
                 href="#marketplace"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
