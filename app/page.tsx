@@ -2,7 +2,6 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import DataShowcase from './components/DataShowcase'
 import HowItWorks from './components/HowItWorks'
-import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <HeroSection />
       <DataShowcase />
       <HowItWorks />
-      <FinalCTA />
       <Footer />
     </main>
   )
