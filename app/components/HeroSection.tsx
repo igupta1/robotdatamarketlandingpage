@@ -26,8 +26,8 @@ const HeroSection = () => {
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="space-y-8">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="block text-white">The Marketplace for</span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+            <span className="block text-white mb-4">The Marketplace for</span>
             <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
               Robotics Training Data
             </span>
