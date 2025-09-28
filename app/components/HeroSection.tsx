@@ -56,25 +56,6 @@ const HeroSection = () => {
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">10M+</div>
-              <div className="text-sm text-gray-400 mt-2">Training Samples</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">500+</div>
-              <div className="text-sm text-gray-400 mt-2">Datasets</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">50+</div>
-              <div className="text-sm text-gray-400 mt-2">Data Providers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">1000+</div>
-              <div className="text-sm text-gray-400 mt-2">Active Users</div>
-            </div>
-          </div>
         </div>
       </div>
 
