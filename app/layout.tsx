@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   keywords: 'robotics, training data, machine learning, AI, datasets, automation',
   authors: [{ name: 'Neural Inc.' }],
   creator: 'Neural Inc.',
+  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     type: 'website',
     locale: 'en_US',

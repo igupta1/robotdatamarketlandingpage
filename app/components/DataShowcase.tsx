@@ -95,7 +95,7 @@ const DataShowcase = () => {
 
     return (
       <div
-        className="card-hover bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg group relative"
+        className="card-hover bg-white rounded-lg sm:rounded-xl overflow-hidden border border-gray-200 shadow-lg group relative"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -107,6 +107,7 @@ const DataShowcase = () => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               isHovered ? 'opacity-0' : 'opacity-100'
             }`}
+            loading="lazy"
           />
           
           {/* Video Element */}
@@ -119,6 +120,7 @@ const DataShowcase = () => {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               isHovered ? 'opacity-100' : 'opacity-0'
             }`}
+            preload="none"
           />
         </div>
       </div>
@@ -129,14 +131,14 @@ const DataShowcase = () => {
     <section className="pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-white" id="marketplace">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto px-2">
             Datasets Coming Soon...
           </h2>
         </div>
 
         {/* Dataset Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {datasets.map((dataset) => {
             // All cards are now video cards - no text
             if (dataset.id === 1) {
@@ -169,8 +171,8 @@ const DataShowcase = () => {
         </div>
 
         {/* Footer Text */}
-        <div className="text-center mt-6">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
+        <div className="text-center mt-8 sm:mt-6">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto px-2">
             And Many More to Come...
           </h2>
         </div>

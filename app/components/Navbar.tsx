@@ -50,7 +50,8 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-2 py-2 rounded-md"
+              className="text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-2 py-2 rounded-md min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-label="Toggle navigation menu"
             >
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
@@ -64,24 +65,24 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm rounded-lg mt-2 border border-gray-200 shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/98 backdrop-blur-sm rounded-lg mt-2 mx-4 border border-gray-200 shadow-lg">
               <a
                 href="#marketplace"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 block px-4 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-gray-50 min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Marketplace
               </a>
               <a
                 href="#contact-us"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 block px-4 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-gray-50 min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 For Sellers
               </a>
               <a
                 href="#contact-us"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 block px-4 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-gray-50 min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Contact

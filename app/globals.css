@@ -46,4 +46,27 @@
   .gradient-bg {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary {
+      @apply py-4 px-6 text-base;
+    }
+    
+    .card-hover:hover {
+      @apply scale-100 transform-none;
+    }
+    
+    /* Disable hover effects on touch devices */
+    .btn-primary:hover, .btn-secondary:hover {
+      @apply scale-100;
+    }
+  }
+  
+  /* Better touch targets for mobile */
+  @media (max-width: 768px) {
+    button, a, input {
+      @apply min-h-[44px];
+    }
+  }
 }

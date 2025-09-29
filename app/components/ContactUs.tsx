@@ -74,27 +74,27 @@ const ContactUs = () => {
   }
 
   return (
-    <section id="contact-us" className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contact-us" className="bg-gray-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 mt-3 sm:mt-4 max-w-2xl mx-auto px-2 sm:px-0">
             Join our community and be the first to know when we launch
           </p>
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column - Seller Waitlist */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 Join the Waitlist to Become a Seller
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Have robotics datasets to share? Join our seller community and monetize your data.
               </p>
             </div>
@@ -121,7 +121,7 @@ const ContactUs = () => {
                       required
                       value={sellerForm.fullName}
                       onChange={(e) => setSellerForm({...sellerForm, fullName: e.target.value})}
-                      className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-base"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -139,7 +139,7 @@ const ContactUs = () => {
                       required
                       value={sellerForm.email}
                       onChange={(e) => setSellerForm({...sellerForm, email: e.target.value})}
-                      className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-base"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -160,12 +160,12 @@ const ContactUs = () => {
           </div>
 
           {/* Right Column - Buyer Waitlist */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 Get Notified When Datasets are Available
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Be the first to access premium robotics datasets when they become available.
               </p>
             </div>
@@ -192,7 +192,7 @@ const ContactUs = () => {
                       required
                       value={buyerForm.fullName}
                       onChange={(e) => setBuyerForm({...buyerForm, fullName: e.target.value})}
-                      className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-base"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -210,7 +210,7 @@ const ContactUs = () => {
                       required
                       value={buyerForm.email}
                       onChange={(e) => setBuyerForm({...buyerForm, email: e.target.value})}
-                      className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-base"
                       placeholder="Enter your email"
                     />
                   </div>
