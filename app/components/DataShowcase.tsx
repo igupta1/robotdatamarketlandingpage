@@ -131,7 +131,7 @@ const DataShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
-            Explore Our Datasets
+            Datasets Coming Soon...
           </h2>
         </div>
 
@@ -152,11 +152,11 @@ const DataShowcase = () => {
             }
             
             if (dataset.id === 4) {
-              return <VideoCard key={dataset.id} videoSrc="/Boxes.mov" previewSrc="/boxes_preview.jpg" />;
+              return <VideoCard key={dataset.id} videoSrc="/Video1.mov" previewSrc="/video1_preview.jpg" />;
             }
             
             if (dataset.id === 5) {
-              return <VideoCard key={dataset.id} videoSrc="/Cleaning.mov" previewSrc="/cleaning_preview.jpg" />;
+              return <VideoCard key={dataset.id} videoSrc="/Video2.mov" previewSrc="/video2_preview.jpg" />;
             }
             
             if (dataset.id === 6) {
@@ -166,6 +166,13 @@ const DataShowcase = () => {
             // This should never be reached since all cards are now video cards
             return null;
           })}
+        </div>
+
+        {/* Footer Text */}
+        <div className="text-center mt-6">
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 max-w-3xl mx-auto">
+            And Many More to Come...
+          </h2>
         </div>
 
       </div>
