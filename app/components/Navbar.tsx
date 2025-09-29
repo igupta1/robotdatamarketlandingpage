@@ -31,13 +31,13 @@ const Navbar = () => {
                 Marketplace
               </a>
               <a
-                href="#for-sellers"
+                href="#contact-us"
                 className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 For Sellers
               </a>
               <a
-                href="#contact"
+                href="#contact-us"
                 className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Contact
@@ -45,12 +45,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Sign Up Button */}
-          <div className="hidden md:block">
-            <button className="btn-primary">
-              Sign Up
-            </button>
-          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -79,27 +73,19 @@ const Navbar = () => {
                 Marketplace
               </a>
               <a
-                href="#for-sellers"
+                href="#contact-us"
                 className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 For Sellers
               </a>
               <a
-                href="#contact"
+                href="#contact-us"
                 className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </a>
-              <div className="px-3 py-2">
-                <button 
-                  className="btn-primary w-full"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sign Up
-                </button>
-              </div>
             </div>
           </div>
         )}

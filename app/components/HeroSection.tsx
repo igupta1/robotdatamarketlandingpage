@@ -3,6 +3,13 @@
 import { ArrowRight, Play } from 'lucide-react'
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-us')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section className="relative h-[45vh] flex items-center justify-center overflow-hidden pt-8 pb-1">
       {/* Background */}
@@ -27,14 +34,14 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <button className="btn-primary group min-w-[200px]">
+            <button onClick={scrollToContact} className="btn-primary group min-w-[200px]">
               <span className="flex items-center justify-center gap-2">
                 Explore Datasets
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
             </button>
             
-            <button className="btn-secondary group min-w-[200px]">
+            <button onClick={scrollToContact} className="btn-secondary group min-w-[200px]">
               <span className="flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
                 Become a Seller
