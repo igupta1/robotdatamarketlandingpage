@@ -1,6 +1,7 @@
 'use client'
 
 import { Database, FileVideo, HardDrive, Eye, Clock, Users } from 'lucide-react'
+import { useState, useRef } from 'react'
 
 const DataShowcase = () => {
   const datasets = [
@@ -72,6 +73,58 @@ const DataShowcase = () => {
     }
   ]
 
+  // Video Card Component
+  const VideoCard = ({ videoSrc, previewSrc }: { videoSrc: string; previewSrc: string }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    };
+
+    return (
+      <div
+        className="card-hover bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg group relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="relative aspect-video">
+          {/* Static Preview Image */}
+          <img
+            src={previewSrc}
+            alt="Video preview"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              isHovered ? 'opacity-0' : 'opacity-100'
+            }`}
+          />
+          
+          {/* Video Element */}
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              isHovered ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-white" id="marketplace">
       <div className="max-w-7xl mx-auto">
@@ -84,40 +137,35 @@ const DataShowcase = () => {
 
         {/* Dataset Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {datasets.map((dataset) => (
-            <div
-              key={dataset.id}
-              className="card-hover bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg group"
-            >
-              {/* Card Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
-                  {dataset.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {dataset.description}
-                </p>
-
-                {/* Metrics and Button Row */}
-                <div className="flex items-start justify-between">
-                  {/* Metrics */}
-                  <div className="space-y-2 flex-1">
-                    {dataset.metrics.map((metric, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <metric.icon className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{metric.value}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Action Button */}
-                  <button className="ml-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap shadow-md">
-                    View Dataset
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+          {datasets.map((dataset) => {
+            // All cards are now video cards - no text
+            if (dataset.id === 1) {
+              return <VideoCard key={dataset.id} videoSrc="/rgb_5sec-1.mov" previewSrc="/rgb_5sec_preview.jpg" />;
+            }
+            
+            if (dataset.id === 2) {
+              return <VideoCard key={dataset.id} videoSrc="/Plants.mov" previewSrc="/plants_preview.jpg" />;
+            }
+            
+            if (dataset.id === 3) {
+              return <VideoCard key={dataset.id} videoSrc="/Painting.mov" previewSrc="/painting_preview.jpg" />;
+            }
+            
+            if (dataset.id === 4) {
+              return <VideoCard key={dataset.id} videoSrc="/Boxes.mov" previewSrc="/boxes_preview.jpg" />;
+            }
+            
+            if (dataset.id === 5) {
+              return <VideoCard key={dataset.id} videoSrc="/Cleaning.mov" previewSrc="/cleaning_preview.jpg" />;
+            }
+            
+            if (dataset.id === 6) {
+              return <VideoCard key={dataset.id} videoSrc="/Folding.mov" previewSrc="/folding_preview.jpg" />;
+            }
+            
+            // This should never be reached since all cards are now video cards
+            return null;
+          })}
         </div>
 
       </div>
